@@ -43,6 +43,8 @@ AWS no longer offers free public IP addresses and instance assigned a public IP 
 
 ![aws-ec2-instance-publicip](https://github.com/user-attachments/assets/77204e88-1925-4049-8f33-4b7b7bde1cb3)
 
+Please ensure the permissions on your private key is secure else there may be issue with remotely accessing the instance.
+
 1. Remotely log into the instance via ssh using the previously downloaded key pair.
    ```bash
    ssh -i <private key location> username@serverIP
@@ -52,4 +54,20 @@ AWS no longer offers free public IP addresses and instance assigned a public IP 
       sudo apt update -y
       sudo apt upgrade -y
       ```
-3. 
+      ![aws-ec2-instance-update](https://github.com/user-attachments/assets/19fce26a-e460-4e12-b0fd-7edf7dc35731)
+
+### Preparing LAMP Stack - Linux, Apache, MySQL, PHP
+
+### Installing Webserver - Apache 2
+   ```bash
+   sudo apt install apache2 -y
+   ```
+### Installing Database - MySQL
+   ```bash
+   sudo apt install mysql-server -y
+   ```
+### Installing PHP and PHP modules
+   ```bash
+   sudo apt install php libapache2-mod-php php-mysql php-xml php-mbstring php-zip php-intl php-gd php-curl php-soap -y
+   ```
+
