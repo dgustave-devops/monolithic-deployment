@@ -8,16 +8,6 @@ This repository contains a guide for a distributed system deployment of the open
 - Security Groups
 - Availability Zones (AZs)
 
-### Developer Notes:
-#### Example
-Example text
-
-## Installation
-Example of embedding code.
-
-```bash
-sudo apt update -y
-```
 ### Launching an EC2 Instance
 1. Open up your AWS Console and select the EC2 Service.\
 2. Select "Instances" from the drop down on the left.\
@@ -70,4 +60,50 @@ Please ensure the permissions on your private key is secure else there may be is
    ```bash
    sudo apt install php libapache2-mod-php php-mysql php-xml php-mbstring php-zip php-intl php-gd php-curl php-soap -y
    ```
+### Configure MySQL
+Secure the MySQL installation by running
+   ```bash
+   sudo mysql_secure_installation
+   ```
+Follow the prompts to secure your MySQL server (set a root password, remove anonymous users, disallow root login remotely, remove the test database, and reload privileges).
+
+Log into MySQl as the root user:
+   ```bash
+   sudo mysql -u root -p
+   ```
+Create a database and user for moodle
+   ```bash
+   CREATE DATABASE moodle DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+   CREATE USER 'admin'@'localhost' IDENTIFIED BY '********';
+   GRANT ALL PRIVILEGES ON moodle.* TO 'admin'@'localhost';
+   FLUSH PRIVILEGES;
+   EXIT;
+   ```
+### Download and Setup Moodle
+Download the latest version of Moodle
+```bash
+   sudo wget https://download.moodle.org/stable402/moodle-latest-402.tgz
+```
+
+Extract the moodle archive
+```bash
+   sudo tar -zxvf moodle-latest-402.tgz
+```
+
+Move the moodle files to the webroot directory
+```bash
+sudo mv moodle /var/www/
+```
+
+Create a Moodle data directory and set file permissions (where Moodle will store its files):
+```bash
+sudo mkdir /var/www/moodledata
+sudo chown -R www-data:www-data /var/www/moodledata /var/www/html/moodle
+sudo chmod -R 755 /var/www/moodledata /var/www/html/moodle
+```
+
+
+
+
+
 
