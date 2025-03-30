@@ -31,3 +31,7 @@ https://aws.amazon.com/ec2/instance-types/\
 8. Under the "Network settings" section, Click "edit" on the corner to the right of the section heading, and enable auto-assign public IP. This will provide the EC2 instance with a publicly accessible IP address (Please not this is not a static Ip and may change when the instance is shutdown and start, or restarted. For a static IP, please look into aws elastic IPs. we'll use the default VPC and subnet for demonstration purposes, and create a new security group that allows inbound traffic on ports 80, 443, and 22.\
 9. Under the "Configure storage" section, configure an 8GB GP3 EBS volume.\
 10. Scroll down to the bottom of the page and select launch instance.\
+
+### Confifuring EC2 instance
+1. Remotely log into the instance via ssh using the previously downloaded key pair.
+2. 2. 
