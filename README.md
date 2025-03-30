@@ -82,12 +82,12 @@ Create a database and user for moodle
 ### Download and Setup Moodle
 Download the latest version of Moodle
 ```bash
-   sudo wget https://download.moodle.org/stable402/moodle-latest-402.tgz
+   sudo wget https://download.moodle.org/download.php/stable405/moodle-latest-405.zip
 ```
 
-Extract the moodle archive
+Unzip the moodle archive
 ```bash
-   sudo tar -zxvf moodle-latest-402.tgz
+   sudo unzip moodle-latest-405.zip
 ```
 
 Move the moodle files to the webroot directory
