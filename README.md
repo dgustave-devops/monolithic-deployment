@@ -32,6 +32,22 @@ https://aws.amazon.com/ec2/instance-types/\
 9. Under the "Configure storage" section, configure an 8GB GP3 EBS volume.\
 10. Scroll down to the bottom of the page and select launch instance.\
 
-### Confifuring EC2 instance
+### Preparing EC2 instance
+
+Please note:
+AWS no longer offers free public IP addresses and instance assigned a public IP will be charged accordingly. In adddition to this change in policy, newly launched instance will no longer be automatically assigned a public IP address. Therefore after launching an EC2 instance, to remotely access through a machine outside of the VPC, a public IP address or an elastic IP address will have to be assigned to the EC2 instance. In this case, we will assign a regular public IP address for demonstration purposes. Please note regular public IP address may change when the instance is restarted.
+
+On the EC2 instance details page
+![aws-ec2-mono-instance-details](https://github.com/user-attachments/assets/e275cfb2-4945-42f4-b927-1efc0bdeb00f)
+
+
 1. Remotely log into the instance via ssh using the previously downloaded key pair.
-2. 2. 
+   ```bash
+   ssh -i <private key location> username@serverIP
+   ```
+2. Update virutal machine and upgrade packages
+      ```bash
+      sudo apt update -y
+      sudo apt upgrade -y
+      ```
+3. 
