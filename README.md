@@ -37,9 +37,11 @@ https://aws.amazon.com/ec2/instance-types/\
 Please note:
 AWS no longer offers free public IP addresses and instance assigned a public IP will be charged accordingly. In adddition to this change in policy, newly launched instance will no longer be automatically assigned a public IP address. Therefore after launching an EC2 instance, to remotely access through a machine outside of the VPC, a public IP address or an elastic IP address will have to be assigned to the EC2 instance. In this case, we will assign a regular public IP address for demonstration purposes. Please note regular public IP address may change when the instance is restarted.
 
-On the EC2 instance details page
 ![aws-ec2-mono-instance-details](https://github.com/user-attachments/assets/e275cfb2-4945-42f4-b927-1efc0bdeb00f)
 
+1. On the EC2 instance details page, click "Actions" button, >Networking >Manage IP Addresses. Select the network interface represented by "eth0" and enable auto-assign public IP. Then click save and confirm the changes. The EC2 instance should now be assigned a public IP address.
+
+![aws-ec2-instance-publicip](https://github.com/user-attachments/assets/77204e88-1925-4049-8f33-4b7b7bde1cb3)
 
 1. Remotely log into the instance via ssh using the previously downloaded key pair.
    ```bash
