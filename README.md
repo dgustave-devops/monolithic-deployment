@@ -108,7 +108,7 @@ Create a new apache configuration file for moodle
 sudo nano /etc/apache2/sites-available/moodle.conf
 ```
 
-###Important notice regarding Moodle routing on version 4.5+
+### Important notice regarding Moodle routing on version 4.5+
 Since Moodle 4.5, a Routing Engine is included in Moodle. This needs to be configured to handle requests using the "FallbackResource" directive:
 More could be found on this here - https://docs.moodle.org/405/en/Apache
 
@@ -145,7 +145,15 @@ Restart apache
 ```bash
 sudo ssytemctl restart apache2
 ```
+### Complete Moodle Setup via Browser
+![moodle-setup-page](https://github.com/user-attachments/assets/434be730-baf7-4c3c-ac47-c64ded2cdac1)
+Open a browser and navigate to your server's domain or IP address.
 
+Follow the on-screen installation wizard to configure Moodle. Provide the database credentials and configure the necessary settings.
 
+During the installation process, Moodle will guide you through setting up the administrator account and configuring your site's main settings.
+
+### Successful installation
+We have now successfully installed Moodle LMS on a Linux Ubuntu 24.04 LTS server. You can now log into Moodle and manage your learning environment.
 
 
