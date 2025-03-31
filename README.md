@@ -171,11 +171,13 @@ Moodle server checks
 ![moodle-server-checks](https://github.com/user-attachments/assets/112dd500-1646-4a4d-a8c3-1d29ea70b3ae)
 
 
-
-
 During the installation process, Moodle will guide you through setting up the administrator account and configuring your site's main settings.
 
 ### Successful installation
 We have now successfully installed Moodle LMS on a Linux Ubuntu 24.04 LTS server. You can now log into Moodle and manage your learning environment.
+![moodle-complete](https://github.com/user-attachments/assets/6ef3161a-5390-4220-937d-44332dbdcff0)
+
+
+
 
 
