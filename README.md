@@ -107,27 +107,43 @@ Create a new apache configuration file for moodle
 ```bash
 sudo nano /etc/apache2/sites-available/moodle.conf
 ```
+
+###Important notice regarding Moodle routing on version 4.5+
+Since Moodle 4.5, a Routing Engine is included in Moodle. This needs to be configured to handle requests using the "FallbackResource" directive:
+More could be found on this here - https://docs.moodle.org/405/en/Apache
+
 Replicate the following strucure:
 ```bash
  ServerAdmin admin@example.com
-    DocumentRoot /var/www/moodle
-    ServerName demo.example.com
 
-    
-        Options Indexes FollowSymLinks MultiViews
-        AllowOverride All
-        Require all granted
-    
+DocumentRoot /var/www/moodle
+Servername demo.example.com
+<Directory /var/www/moodle>
+        #Options Indexes FollowSymLinks MultiViews
+    AllowOverride None
+    Require all granted
+    FallbackResource /moodle/r.php
+</Directory>
 
     ErrorLog ${APACHE_LOG_DIR}/moodle_error.log
     CustomLog ${APACHE_LOG_DIR}/moodle_access.log combined
+
 ```
 
 Enable the moodle site and rewrite module, then restart
 ```bash
 sudo a2ensite moodle.conf
 sudo a2enmod rewrite
-sudo systemctl restart apache2
+```
+
+Remember to disable the default apache site
+```bash
+sudo a2dissite 000-default.conf
+```
+
+Restart apache
+```bash
+sudo ssytemctl restart apache2
 ```
 
 
