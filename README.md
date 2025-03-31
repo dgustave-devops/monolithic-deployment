@@ -140,6 +140,10 @@ Remember to disable the default apache site
 ```bash
 sudo a2dissite 000-default.conf
 ```
+Set PHP max_input_vars to 5000 and remove ";".
+```bash
+sudo nano /etc/php/8.3/apache2/php.ini
+```
 
 Restart apache
 ```bash
@@ -150,6 +154,24 @@ sudo ssytemctl restart apache2
 Open a browser and navigate to your server's domain or IP address.
 
 Follow the on-screen installation wizard to configure Moodle. Provide the database credentials and configure the necessary settings.
+
+Confirm paths
+![moodle-paths](https://github.com/user-attachments/assets/374ef2e4-5130-4a34-961f-de7f765580d9)
+
+Choose database driver
+![moodle-database](https://github.com/user-attachments/assets/47f758eb-2a18-4b86-a0e8-ac785548701b)
+
+Database settings
+![moodel-database-settings](https://github.com/user-attachments/assets/3f74a58a-da17-4ecd-8c64-1e5705f32764)
+
+Moodle copyright notice
+![moodle-copyright](https://github.com/user-attachments/assets/7df0c049-cd22-450b-b744-a99b035ab517)
+
+Moodle server checks
+![moodle-server-checks](https://github.com/user-attachments/assets/112dd500-1646-4a4d-a8c3-1d29ea70b3ae)
+
+
+
 
 During the installation process, Moodle will guide you through setting up the administrator account and configuring your site's main settings.
 
