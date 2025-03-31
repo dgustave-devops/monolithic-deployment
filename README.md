@@ -82,12 +82,12 @@ Create a database and user for moodle
 ### Download and Setup Moodle
 Download the latest version of Moodle
 ```bash
-   sudo wget https://download.moodle.org/download.php/stable405/moodle-latest-405.zip
+   sudo wget https://download.moodle.org/download.php/direct/stable405/moodle-latest-405.tgz
 ```
 
-Unzip the moodle archive
+Extract the moodle archive
 ```bash
-   sudo unzip moodle-latest-405.zip
+   sudo tar -xvzf moodle-latest-405.tgz
 ```
 
 Move the moodle files to the webroot directory
@@ -98,11 +98,37 @@ sudo mv moodle /var/www/
 Create a Moodle data directory and set file permissions (where Moodle will store its files):
 ```bash
 sudo mkdir /var/www/moodledata
-sudo chown -R www-data:www-data /var/www/moodledata /var/www/html/moodle
-sudo chmod -R 755 /var/www/moodledata /var/www/html/moodle
+sudo chown -R www-data:www-data /var/www/moodledata /var/www/moodle
+sudo chmod -R 755 /var/www/moodledata /var/www/moodle
 ```
 
+### Configure Apache 2 for Moodle
+Create a new apache configuration file for moodle
+```bash
+sudo nano /etc/apache2/sites-available/moodle.conf
+```
+Replicate the following strucure:
+```bash
+ ServerAdmin admin@example.com
+    DocumentRoot /var/www/moodle
+    ServerName demo.example.com
 
+    
+        Options Indexes FollowSymLinks MultiViews
+        AllowOverride All
+        Require all granted
+    
+
+    ErrorLog ${APACHE_LOG_DIR}/moodle_error.log
+    CustomLog ${APACHE_LOG_DIR}/moodle_access.log combined
+```
+
+Enable the moodle site and rewrite module, then restart
+```bash
+sudo a2ensite moodle.conf
+sudo a2enmod rewrite
+sudo systemctl restart apache2
+```
 
 
 
