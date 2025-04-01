@@ -1,5 +1,6 @@
 # monolithic-deployment
 This repository contains a guide for a distributed system deployment of the open source Moodle application on Amazon Web Services (AWS).
+
 ![monolithic-deployment](https://github.com/user-attachments/assets/d3442da2-f39a-4978-b5f0-7cf16a8f32ea)
 
 ### AWS Components:
