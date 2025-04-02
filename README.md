@@ -1,7 +1,8 @@
 # monolithic-deployment
 This repository contains a guide for a monolithic system deployment of the open source Moodle application on Amazon Web Services (AWS).
-
+<p align="center">
 ![monolithic-deployment](https://github.com/user-attachments/assets/d3442da2-f39a-4978-b5f0-7cf16a8f32ea)
+</p>
 
 ### AWS Components:
 - Virtual Private Cloud (VPC)
