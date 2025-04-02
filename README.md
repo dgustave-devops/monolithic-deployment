@@ -1,8 +1,6 @@
 # monolithic-deployment
 This repository contains a guide for a monolithic system deployment of the open source Moodle application on Amazon Web Services (AWS).
-<p align="center">
 ![monolithic-deployment](https://github.com/user-attachments/assets/d3442da2-f39a-4978-b5f0-7cf16a8f32ea)
-</p>
 
 ### AWS Components:
 - Virtual Private Cloud (VPC)
@@ -24,9 +22,7 @@ This repository contains a guide for a monolithic system deployment of the open 
 10. Scroll down to the bottom of the page and select launch instance.
 
 ### Preparing EC2 instance
-
-Please note:
-AWS no longer offers free public IP addresses and instance assigned a public IP will be charged accordingly. In adddition to this change in policy, newly launched instance will no longer be automatically assigned a public IP address. Therefore after launching an EC2 instance, to remotely access through a machine outside of the VPC, a public IP address or an elastic IP address will have to be assigned to the EC2 instance. In this case, we will assign a regular public IP address for demonstration purposes. Please note regular public IP address may change when the instance is restarted.
+**Please note:** AWS no longer offers free public IP addresses and instance assigned a public IP will be charged accordingly. In adddition to this change in policy, newly launched instance will no longer be automatically assigned a public IP address. Therefore after launching an EC2 instance, to remotely access through a machine outside of the VPC, a public IP address or an elastic IP address will have to be assigned to the EC2 instance. In this case, we will assign a regular public IP address for demonstration purposes. Please note regular public IP address may change when the instance is restarted.
 
 ![aws-ec2-mono-instance-details](https://github.com/user-attachments/assets/e275cfb2-4945-42f4-b927-1efc0bdeb00f)
 
