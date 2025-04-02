@@ -11,7 +11,7 @@ This repository contains a guide for a monolithic system deployment of the open 
 - Availability Zones (AZs)
 
 ### Launching an EC2 Instance
-1. Open up your AWS Console and select the EC2 Service.\
+1 Open up your AWS Console and select the EC2 Service.\
 2. Select "Instances" from the drop down on the left.\
 3. Select "Launch instances" in the top right orange button.\
 4. Provide an appropriate name for the instance in the name field, under the "Name and tags" section.\
