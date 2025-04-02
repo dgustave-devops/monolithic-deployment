@@ -103,7 +103,7 @@ Secure the MySQL installation by running
    ```
 **Important notice regarding Moodle routing on version 4.5+**
 Since Moodle 4.5, a Routing Engine is included in Moodle. This needs to be configured to handle requests using the "FallbackResource" directive:
-More could be found on this here - https://docs.moodle.org/405/en/Apache
+More could be found on this [here](https://docs.moodle.org/405/en/Apache) .
 
 2. Replicate the following strucure:
    ```bash
