@@ -26,7 +26,8 @@ This repository contains a guide for a monolithic system deployment of the open 
 
 1. On the EC2 instance details page, click "Actions" button, >Networking >Manage IP Addresses. Select the network interface represented by "eth0" and enable auto-assign public IP. Then click save and confirm the changes. The EC2 instance should now be assigned a public IP address.
 ![aws-ec2-mono-instance-details](https://github.com/user-attachments/assets/e275cfb2-4945-42f4-b927-1efc0bdeb00f)
-\
+
+
 ![aws-ec2-instance-publicip](https://github.com/user-attachments/assets/77204e88-1925-4049-8f33-4b7b7bde1cb3)
 
 2. Remotely log into the instance via ssh using the previously downloaded key pair. Please ensure the permissions on your private key is secure else there may be issue with remotely accessing the instance.
